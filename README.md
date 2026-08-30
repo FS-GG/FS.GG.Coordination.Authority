@@ -22,7 +22,9 @@ enforce the boundary:
 Runtime jobs mint the App token for this repository only. Comments, webhooks,
 issues, and Projects views are projections or hints; they are not authority.
 
-The `authority-policy-qualification` workflow exercises authorized creation,
-fast-forward CAS, stale-writer rejection, non-fast-forward rejection, and
-deletion rejection. Each run leaves its terminal qualification shard in the
-journal as durable evidence.
+The policy-owner workflow
+`FS-GG/.github/.github/workflows/github-substrate-v2-authority-qualification.yml`
+exercises authorized creation, fast-forward CAS, stale-writer rejection,
+non-fast-forward rejection, and deletion rejection. The authority repository
+receives no App private key. Each qualification run leaves its terminal shard
+in the journal as durable evidence.
